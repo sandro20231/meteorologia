@@ -1,0 +1,17 @@
+name: teste
+on: push
+jobs:
+  test_project:
+    runs-on: ubuntu-latest
+    steps:
+      -name: ação
+      uses: actions/checkout@v2
+
+      -name: instalar
+      run: |
+        pip install django
+      
+      -name: testar
+      run: |
+        python manage.py runserver
+
