@@ -1,10 +1,7 @@
 name: CI Django
 
-on:
-  push:
-    branches:
-      - main  # ou master, dependendo do seu branch principal
-  pull_request:
+on: push
+
 
 jobs:
   test:
