@@ -7,5 +7,5 @@ class Testes(TestCase):
     def test_1(self):
         """Teste de abrir pagina index"""
         c = Client()
-        response = c.get("")
+        response = c.get("/")
         self.assertEqual(response.status_code, 200)

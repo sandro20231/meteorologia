@@ -3,7 +3,7 @@ name: CI meteorologia
 on:
   push:
     branches:
-      - main
+      - main  # ou master, se seu branch principal for master
   pull_request:
 
 jobs:
