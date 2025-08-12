@@ -11,4 +11,5 @@ jobs:
           pip install Django
       - name: nome4
         run: |
+          cd meteorologia
           python manage.py runserver
