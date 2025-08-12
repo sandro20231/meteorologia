@@ -4,8 +4,8 @@ from django.test import TestCase, Client
 
 
 class Testes(TestCase):
-    def test_1(self):
-        """Teste de abrir pagina index"""
+    def test_a(self):
+
         c = Client()
         response = c.get("/")
         self.assertEqual(response.status_code, 200)
