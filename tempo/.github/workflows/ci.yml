@@ -1,16 +1,16 @@
-name: CI meteorologia
+name: CI Django
 
 on:
   push:
     branches:
-      - main  # ou master, se seu branch principal for master
+      - main  # ou master, dependendo do seu branch principal
   pull_request:
 
 jobs:
-  test_project:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar código
+      - name: Checkout do código
         uses: actions/checkout@v2
 
       - name: Configurar Python
@@ -23,10 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Aplicar migrações
+      - name: Rodar migrações
         run: |
           python manage.py migrate
 
       - name: Rodar testes
         run: |
-          python manage.py test
+          python manage.py test -v 2
