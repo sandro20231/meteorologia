@@ -4,11 +4,11 @@ jobs:
   test_project:
     runs-on: ubuntu-latest
     steps:
-      -name: nome2
-      uses: actions/checkout@v2
-      -name: nome3
-      run: |
-        pip install Django
-      -name: nome4
-      run: |
-        python manage.py runserver
+      - name: nome2
+        uses: actions/checkout@v2
+      - name: nome3
+        run: |
+          pip install Django
+      - name: nome4
+        run: |
+          python manage.py runserver
