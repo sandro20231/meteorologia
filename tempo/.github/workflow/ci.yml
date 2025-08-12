@@ -2,10 +2,10 @@ name: cd/di tempo
 on: push
 jobs:
   test_project:
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
     steps:
       -name: verificar ação guithub
-      uses:actions/checkout@v2
+        uses:actions/checkout@v2
       -name: instalar
       run: |
         pip install django
